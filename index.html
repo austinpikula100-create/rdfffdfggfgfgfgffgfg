@@ -1,56 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Rivo</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f8f9fa;
-      color: #202124;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-
-    header {
-      position: absolute;
-      top: 20px;
-      left: 20px;
-      font-size: 24px;
-      font-weight: bold;
-    }
-
-    .search-box {
-      width: 90%;
-      max-width: 500px;
-    }
-
-    input {
-      width: 100%;
-      padding: 16px 20px;
-      font-size: 16px;
-      border-radius: 24px;
-      border: 1px solid #ccc;
-      outline: none;
-    }
-
-    input:focus {
-      border-color: #1a73e8;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
-  <header>Rivo</header>
 
-  <div class="search-box">
-    <input type="text" placeholder="Search Rivo" />
+<header>
+  <span class="logo">Rivo</span>
+  <button id="darkToggle">🌙</button>
+</header>
+
+<main>
+  <h1 class="big-logo">Rivo</h1>
+
+  <input 
+    type="text" 
+    id="search"
+    placeholder="Search Rivo"
+    onkeydown="handleSearch(event)"
+  >
+
+  <div class="dots" onclick="toggleApps()">⋮⋮⋮</div>
+
+  <div class="apps" id="apps">
+    <a href="apps/ai.html">🤖 AI</a>
+    <a href="apps/music.html">🎵 Music</a>
+    <a href="apps/video.html">🎬 Video</a>
+    <a href="apps/games.html">🎮 Games</a>
   </div>
+</main>
+
+<script src="script.js"></script>
 </body>
 </html>
